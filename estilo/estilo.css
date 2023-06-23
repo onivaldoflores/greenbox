@@ -1,0 +1,193 @@
+*{
+    margin: 0px;
+    list-style: none;
+}
+
+#geral{
+    width: 1100px;
+    margin: auto;
+    height: 0px;
+}
+
+#banner{
+    height: 539px;
+    background-image:  url('../img/fundo_banner.png');
+    text-align: center;
+}
+
+#banner div{
+    float: left;
+    width: 430px;
+    height: 250px;
+    background-color: rgb(255, 255, 255,0.5);
+    padding: 30px;
+    padding-top: 50px;
+    margin-left: 50px;
+    margin-top: 150px;
+    border-radius: 20px;
+}
+
+#banner div p{
+    font-family: sans-serif;
+    font-size: 26px;
+    text-align: left;
+}
+
+/**************BOTÃO COM CANTO ARREDONDADO PELO CSS */
+
+.btn_conheca{
+    border-radius: 34px;
+    width: 245px;
+    height: 68px;
+    background-color: #34002a;
+    color: #fff;
+    font-size: 28px;
+    font-weight: bold;
+    border: none;
+}
+
+.btn_conheca:hover{
+    background-color: #6a0055;
+}
+
+/**/
+#quadro{
+    height: 511px;
+    background-color: #0f3c2a;
+    padding-top: 33px;
+}
+
+.noticia{
+    display: inline-flex;
+    width: 281px;
+    height: 409px;
+    background-color: #fff;
+    margin-left: 25px;
+    padding: 24px;
+}
+
+.titulo_noticia p{
+    font-family: sans-serif;
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+.texto_noticia p{
+    font-family: sans-serif;
+    font-size: 22px;
+    margin-top: 15px;
+}
+
+#produtos{
+    height: 641px;
+    background-color: chartreuse;
+}
+
+#rodape{
+    height: 126px;
+    background-color: #343434;
+}
+
+#topo{
+   background-color: #486632;
+   height: 150px;
+   padding-left: 40px;
+   padding-right: 40px;
+}
+
+#logo{
+    display: inline-block;
+    width: 200px;
+    padding-top: 20px;
+}
+
+#menu{
+    float: right;
+}
+
+#menu nav ul li{
+    display: inline-block;
+    margin: 20px;
+    padding-top: 40px;
+}
+
+#menu nav ul li a{
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-decoration-line: none;
+}
+
+#menu nav ul li a:hover{
+    color:#2e2e24;
+}
+
+#produtos{
+    height: 641px;
+    background-image: url("../img/fundo-produtos.png");
+    background-repeat: no-repeat;
+    background-color: #0f3c2a;
+}
+
+.transparencia-produtos{
+    background-color: #ffffffb4;
+    font-family: sans-serif;
+    font-size: 56px;
+    text-align: center;
+    font-weight: bold;
+    padding: 20px;
+    margin-top: 70px;
+    margin-bottom: 70px;
+    display: inline-block;
+    width: 100%;
+}
+
+.principais-produtos{
+    margin-left: 20px;
+    display: grid;
+    grid-template-columns: 240px 240px 240px 240px;
+    grid-template-rows: 320px 320px 320px 320px;
+    gap: 30px;
+}
+
+.lista-produtos{
+    background-color: #ffffff;    
+}
+
+.lista-produtos a{
+    font-family: sans-serif;
+    font-size: 26px;
+    font-style: none;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+    padding: 5px;
+    width: 100%;
+}
+
+
+/************RODAPÉ************************/
+.menu-rodape{
+    text-align: center;
+}
+.menu-rodape nav ul li{
+    display: inline-block;
+    margin: 20px;
+}
+.menu-rodape nav ul li a{
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 20px;
+    text-decoration-line: none;
+}
+.menu-rodape nav ul li a:hover{
+    color:#2e2e24;
+}
+
+#rodape p{
+    font-family: sans-serif;
+    color: #fff;
+    font-size: 15px;
+    text-align: center;
+}
