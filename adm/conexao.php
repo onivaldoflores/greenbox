@@ -7,12 +7,9 @@
     // Create connection
     $conn = new mysqli($servername, $username, $password, $database);
 
-    /*
-    // Check connection
-    if (!$conn) {
-        die("Connection failed: " . mysqli_connect_error());
-    }    
-    echo "Connected successfully";
-    */
-    //mysqli_close($conn);
+    if($conn->connect_errno){
+        echo "Erro de conexão com o Banco de Dados";
+    }else{
+        echo "Conexão com o Banco de Dados foi um sucesso";
+    }
 ?>
