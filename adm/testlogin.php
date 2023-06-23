@@ -1,17 +1,29 @@
 <?php
+session_start();
 
-require_once('conexao.php');
+ if(isset($_POST['entrar'])){
+    echo "botão existe";
 
-$login = $_POST["login"];
-$senha = $_POST["senha"];
-$entrar = $_POST["entrar"];
+    require_once('conexao.php');
 
-$sql = "SELECT * FROM usuarios WHERE email='$login' AND senha='$senha'";
+    $login = $_POST["login"];
+    $senha = $_POST["senha"];
+    $entrar = $_POST["entrar"];
 
-$result = $conn->query($sql);
+    $sql = "SELECT * FROM usuarios WHERE email='$login' AND senha='$senha'";
+
+    $result = $conn->query($sql);
 
     if(mysqli_num_rows($result) == 0){
+        session_destroy();
         header('Location: index.php');
     }else{
+        $_SESSION['login'] = $login;
         header('Location: sistema.php');
     }
+
+ }else{
+    header('Location: index.php');
+ }
+
+
