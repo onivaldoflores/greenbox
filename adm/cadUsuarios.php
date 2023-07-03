@@ -8,7 +8,7 @@
 </head>
 <body>
 <div id="espaco-login">
-        <form action="#" method="POST">
+        <form action="usuarioDB.php" method="POST">
             <fieldset>
                 <legend>Cadastro de Usuários</legend>
                 <input type="text" name="nome" class="campoForm" placeholder="Nome">
