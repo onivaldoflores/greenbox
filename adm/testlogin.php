@@ -2,7 +2,6 @@
 session_start();
 
  if(isset($_POST['entrar'])){
-    echo "botão existe";
 
     require_once('conexao.php');
 
