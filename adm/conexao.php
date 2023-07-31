@@ -10,6 +10,6 @@
     if($conn->connect_errno){
         echo "Erro de conexão com o Banco de Dados";
     }else{
-        echo "Conexão com o Banco de Dados foi um sucesso";
+        
     }
 ?>
