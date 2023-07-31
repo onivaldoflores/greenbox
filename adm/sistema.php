@@ -17,7 +17,7 @@ if(!isset($_SESSION['login']) == true){
     <title>Sistema administrativo</title>
 </head>
 <body>
-    <a href="cadUsuarios.php">Usuários</a>
+    <a href="cadUsuarios.php">Cadastro de Usuários</a>
     
 </body>
 </html>
