@@ -5,6 +5,11 @@
     <meta name="viewport" content="width=, initial-scale=1.0">
     <title>Document</title>
     <link rel="stylesheet" href="estilo/estilo.css">
+    <script>
+        function redirect(){
+            window.location.href = "listaUsuarios.php";
+        }
+    </script>
 </head>
 <body>
 <div id="espaco-login">
@@ -18,6 +23,8 @@
                 <input type="password" name="senha" class="campoForm" placeholder="Senha">
                 <br><br>
                 <input type="submit" name="Salvar" class="btnEnviar" value="Salvar">
+                <br><br>
+                <input type="button" name="Buscar" onclick="redirect()" class="btnEnviar" value="Buscar Usuário">
             </fieldset>
         </form>
     </div>
