@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 23-Jun-2023 às 16:33
+-- Tempo de geração: 04-Ago-2023 às 16:30
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -20,8 +20,6 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `greenbox_db`
 --
-CREATE DATABASE IF NOT EXISTS `greenbox_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
-USE `greenbox_db`;
 
 -- --------------------------------------------------------
 
@@ -133,14 +131,19 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   `senha` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=2 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=7 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
 --
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`) VALUES
-(1, 'Onivaldo Flores Junior', 'onivaldo.junior@ifpr.edu.br', '123456');
+(1, 'Onivaldo Flores Junior', 'onivaldo.junior@ifpr.edu.br', '123456'),
+(2, 'teste', 'teste', 'teste'),
+(3, 'teste1', 'teste1', 'teste1'),
+(4, 'asd', 'asd', 'asd'),
+(5, '', 'onivaldo.junior', '123456'),
+(6, 'teste', 'teste', '123456');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
