@@ -1,6 +1,10 @@
+*{
+    margin:0px;
+}
+
 body{
     font-family: Arial, Helvetica, sans-serif;
-    background: linear-gradient(to right, rgb(20,147,220), rgb(17,54,71));
+    background: #EAEAEA;
 }
 
 #espaco-login{
@@ -45,4 +49,69 @@ body{
 
 .tabela_usuarios th{
     border-bottom: 2px #393939 solid;
+}
+
+#geral{
+    width: 1024px;
+    height: 100%;
+    display: flex;
+    height: 100vh;
+}
+
+#geral-esq{
+    width: 238px;
+    background: #5B57A2;
+    color: #EAEAEA;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#logo{    
+    padding: 15px;
+    background: #38347B;
+}
+
+#menu{
+    padding: 15px;
+}
+#geral-dir{
+    display: grid;
+    flex-grow: 1;
+    grid-template-columns: 354px 354px;
+    grid-template-rows: 258px 258px;
+    gap: 25px;
+    padding: 42px 0px 0px 25px;
+}
+
+.titulo-aba{
+    border-radius: 10px 10px 0px 0px;
+    background: #D9D9D9;
+    width: 134px;
+    margin-left: 18px;
+    height: 10px;
+    color: #929292;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px;
+}
+
+.titulo-aba p{
+    margin-left: 12px;
+}
+
+.conteudo-aba{
+    height: 208px;
+    flex-shrink: 0;
+    border-radius: 10px;
+    background: #FFF;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    padding: 10px;
 }

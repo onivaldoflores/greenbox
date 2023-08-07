@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 04-Ago-2023 às 16:30
+-- Tempo de geração: 07-Ago-2023 às 16:33
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -20,6 +20,8 @@ SET time_zone = "+00:00";
 --
 -- Banco de dados: `greenbox_db`
 --
+CREATE DATABASE IF NOT EXISTS `greenbox_db` DEFAULT CHARACTER SET utf8 COLLATE utf8_unicode_ci;
+USE `greenbox_db`;
 
 -- --------------------------------------------------------
 
