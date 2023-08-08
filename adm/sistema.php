@@ -21,15 +21,17 @@ if(!isset($_SESSION['login']) == true){
     <div id="geral">
         <div id="geral-esq">
             <div id="logo">
-                Logo
-                <br><br>
+                <img src="img/logo.png" alt="">
+                <br>
                 <label>
                     Bem-vindo: <br>
                     XXXXXXXXXXXXXXXX
                 </label>
             </div>
             <div id="menu">
-                MENU
+                <?php
+                    require_once("menu.php");
+                ?>
             </div>
         </div>
         <div id="geral-dir">           
@@ -38,7 +40,7 @@ if(!isset($_SESSION['login']) == true){
                     <label>NOTÍCIAS</label>
                 </div>
                 <div class="conteudo-aba">
-                    Últimas 5 notícias cadastradas
+                    
                 </div>
             </div>
             <div class="aba-sistema">
@@ -46,7 +48,8 @@ if(!isset($_SESSION['login']) == true){
                     <label>USUÁRIOS</label>
                 </div>
                 <div class="conteudo-aba">
-                    Últimos 5 usuários cadastrados
+                    
+
                 </div>
             </div>
             <div class="aba-sistema">

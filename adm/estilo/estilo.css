@@ -1,5 +1,9 @@
 *{
-    margin:0px;
+    padding:0;
+    margin:0;
+    vertical-align:baseline;
+    list-style:none;
+    border:0
 }
 
 body{
@@ -68,13 +72,33 @@ body{
 }
 
 #logo{    
-    padding: 15px;
+    padding: 32px;
     background: #38347B;
 }
 
 #menu{
-    padding: 15px;
+    padding: 32px;
 }
+
+#menu nav ul li{
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+#menu nav ul li a{
+    color: #EAEAEA;
+    font-family: Trebuchet MS;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+    text-decoration: none;
+}
+
+#menu nav ul li a:hover{
+    color: #969696;
+}
+
 #geral-dir{
     display: grid;
     flex-grow: 1;
