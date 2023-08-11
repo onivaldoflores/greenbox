@@ -34,7 +34,14 @@ if(!isset($_SESSION['login']) == true){
                 ?>
             </div>
         </div>
-        <div id="geral-dir">           
+        <div id="geral-dir">
+            <div class="mapa-site">
+                <p>><a href="sistema.php">Início</a></p>
+                <br>
+                <h1>Sistema Administrativo</h1>
+            </div>            
+            
+            
             <div class="aba-sistema">
                 <div class="titulo-aba">
                     <label>NOTÍCIAS</label>
