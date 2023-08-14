@@ -36,45 +36,49 @@ if(!isset($_SESSION['login']) == true){
         </div>
         <div id="geral-dir">
             <div class="mapa-site">
-                <p>><a href="sistema.php">Início</a></p>
+            <p>Onde estou: 
+                    <a href="sistema.php">&#127969; Início</a>
+            </p>
                 <br>
                 <h1>Sistema Administrativo</h1>
-            </div>            
+            </div>           
             
-            
-            <div class="aba-sistema">
-                <div class="titulo-aba">
-                    <label>NOTÍCIAS</label>
+            <section class="grid">
+                <div class="aba-sistema">
+                    <div class="titulo-aba">
+                        <label>NOTÍCIAS</label>
+                    </div>
+                    <div class="conteudo-aba">
+                        
+                    </div>
                 </div>
-                <div class="conteudo-aba">
-                    
-                </div>
-            </div>
-            <div class="aba-sistema">
-                <div class="titulo-aba">
-                    <label>USUÁRIOS</label>
-                </div>
-                <div class="conteudo-aba">
-                    
+                <div class="aba-sistema">
+                    <div class="titulo-aba">
+                        <label>USUÁRIOS</label>
+                    </div>
+                    <div class="conteudo-aba">
+                        
 
+                    </div>
                 </div>
-            </div>
-            <div class="aba-sistema">
-                <div class="titulo-aba">
-                    <label>PRODUTOS</label>
+                <div class="aba-sistema">
+                    <div class="titulo-aba">
+                        <label>PRODUTOS</label>
+                    </div>
+                    <div class="conteudo-aba">
+                        Últimos 5 produtos cadastrados
+                    </div>
                 </div>
-                <div class="conteudo-aba">
-                    Últimos 5 produtos cadastrados
+                <div class="aba-sistema">
+                    <div class="titulo-aba">
+                        <label>ESTATÍSTICAS</label>
+                    </div>
+                    <div class="conteudo-aba">
+                        Estatísticas gerais sobre o sistema
+                    </div>
                 </div>
-            </div>
-            <div class="aba-sistema">
-                <div class="titulo-aba">
-                    <label>ESTATÍSTICAS</label>
-                </div>
-                <div class="conteudo-aba">
-                    Estatísticas gerais sobre o sistema
-                </div>
-            </div>
+            </section>
+            
             
         </div>
     </div>
