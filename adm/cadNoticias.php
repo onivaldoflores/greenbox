@@ -18,7 +18,7 @@ if(!isset($_SESSION['login']) == true){
     <link rel="stylesheet" href="estilo/estilo.css">
     <script>
         function redirect_lista(){
-            window.location.href = "listaUsuarios.php";
+            window.location.href = "listaNoticias.php";
         }
 
         function redirect_voltar(){
@@ -47,24 +47,27 @@ if(!isset($_SESSION['login']) == true){
             <div class="mapa-site">
                 <p>Onde estou: 
                     <a href="sistema.php">&#127969; Início</a>
-                    / <a href="cadUsuarios.php">Cadastro de Usuários</a>
+                    / <a href="cadNoticias.php">Cadastro de Notícias</a>
                 </p>
                 <br>
-                <h1>Cadastro de Usuários</h1>
+                <h1>Cadastro de Notícias</h1>
             </div>  
 
             <section class="formulario">
                 <div>
-                    <form action="usuarioDB.php" method="POST">
+                    <form action="noticiaDB.php" method="POST">
                     
-                    <input type="text" name="nome" class="campoForm" placeholder="Nome">
+                    <input type="text" name="titulo" class="campoForm" placeholder="Título da Notícia">
                     <br><br>
-                    <input type="text" name="email" class="campoForm" placeholder="E-mail">
+                    <textarea name="texto" class="campoForm" placeholder="Texto da Notícia"></textarea>
                     <br><br>
-                    <input type="password" name="senha" class="campoForm" placeholder="Senha">
+                    <input type="file" name="foto" class="campoForm">
                     <br><br>
+                    <input type="text" name="legenda" class="campoForm" placeholder="Legenda da Foto">
+                    <br><br>
+
                     <input type="submit" name="Salvar" class="btnEnviar" value="Salvar">
-                    <input type="button" name="Buscar" onclick="redirect_lista()" class="btnEnviar" value="Buscar Usuário">
+                    <input type="button" name="Buscar" onclick="redirect_lista()" class="btnEnviar" value="Buscar Notícia">
                     <input type="button" name="Buscar" onclick="redirect_voltar()" class="btnEnviar" value="Voltar">
                     
                     </form>
