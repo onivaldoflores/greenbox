@@ -55,14 +55,13 @@ if(!isset($_SESSION['login']) == true){
 
             <section class="formulario">
                 <div>
-                    <form action="noticiaDB.php" method="POST">
+                    <form action="noticiaDB.php" method="POST" enctype="multipart/form-data">
                     
                     <input type="text" name="titulo" class="campoForm" placeholder="Título da Notícia">
                     <br><br>
                     <textarea name="texto" class="campoForm" placeholder="Texto da Notícia"></textarea>
-                    <br><br>
-                    <input type="file" name="foto" class="campoForm">
-                    <br><br>
+                    <label for="foto" class="campoFoto">Anexar foto</label>
+                    <input type="file" name="foto" id="foto">                   
                     <input type="text" name="legenda" class="campoForm" placeholder="Legenda da Foto">
                     <br><br>
 
