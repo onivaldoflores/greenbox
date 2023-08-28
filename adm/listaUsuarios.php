@@ -32,6 +32,14 @@ if(!isset($_SESSION['login']) == true){
         function redirect_voltar(){
             window.location.href = "cadUsuarios.php";
         }
+
+        function excluir(id){
+            let resposta = confirm("Tem certeza que deseja excluir este usuário?");
+
+            if(resposta == true){
+                window.location.href = "excluiUsuario.php?id="+id;
+            }
+        }
     </script>
 </head>
 <body>
@@ -79,7 +87,7 @@ if(!isset($_SESSION['login']) == true){
                                 echo "<td>". $usuario['id'] ."</td>";
                                 echo "<td>". $usuario['nome'] ."</td>";
                                 echo "<td>". $usuario['email'] ."</td>";
-                                echo "<td><a href='#'>&#10060;</a> <a href='#'>&#128221;</a></td>";
+                                echo "<td><a href='javascript:excluir(". $usuario['id'].")'>&#10060;</a> <a href='#'>&#128221;</a></td>";
                             echo "</tr>";
                         }
                     ?>
