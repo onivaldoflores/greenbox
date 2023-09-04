@@ -217,3 +217,11 @@ input[type="file"]{
     color: #38347B;
 }
 
+.img-lista-noticias{
+    width: 200px;
+}
+
+.tabela_usuarios tr td{
+    align-items: center;
+}
+

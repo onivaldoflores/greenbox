@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Tempo de geração: 22-Ago-2023 às 17:45
+-- Tempo de geração: 04-Set-2023 às 18:15
 -- Versão do servidor: 8.0.27
 -- versão do PHP: 7.4.26
 
@@ -49,7 +49,7 @@ CREATE TABLE IF NOT EXISTS `fotos` (
   `foto` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   `legenda` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=8 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=14 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `fotos`
@@ -61,8 +61,10 @@ INSERT INTO `fotos` (`id`, `id_noticia`, `foto`, `legenda`) VALUES
 (3, 15, '', 'teste'),
 (4, 16, '', 'teste'),
 (5, 17, '', 'teste'),
-(6, 18, 'Array', 'teste'),
-(7, 19, 'Array', 'teste');
+(13, 37, 'a-paisagem-bonita-do-sol-da-praia-com-um-barco_1112-212.avif', 'paisagem'),
+(8, 32, 'Captura de tela 2023-05-02 113044.png', 'asadasd'),
+(9, 33, 'Captura de tela 2023-05-02 113044.png', 'asadasd'),
+(11, 35, 'Captura de tela 2023-05-04 140710.png', 'asadasd');
 
 -- --------------------------------------------------------
 
@@ -94,37 +96,22 @@ CREATE TABLE IF NOT EXISTS `noticias` (
   `titulo` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   `texto` blob NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=25 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=38 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `noticias`
 --
 
 INSERT INTO `noticias` (`id`, `titulo`, `texto`) VALUES
-(1, 'titulo', 0x746578746f),
-(2, 'titulo1', 0x746578746f31),
-(3, 'asd', 0x617364),
-(4, 'asd', 0x617364),
-(5, 'teste', 0x7465737465),
-(6, 'teste', 0x7465737465),
-(7, 'teste', 0x7465737465),
-(8, 'teste', 0x7465737465),
-(9, 'teste', 0x7465737465),
-(10, 'teste', 0x7465737465),
-(11, 'teste', 0x7465737465),
-(12, 'teste', 0x7465737465),
 (13, 'teste', 0x7465737465),
 (14, 'teste', 0x7465737465),
 (15, 'teste', 0x7465737465),
 (16, 'teste', 0x7465737465),
 (17, 'teste', 0x7465737465),
-(18, 'teste', 0x7465737465),
-(19, 'teste', 0x7465737465),
-(20, 'teste', 0x7465737465),
-(21, 'teste', 0x7465737465),
-(22, 'teste', 0x7465737465),
-(23, 'teste', 0x7465737465),
-(24, 'teste', 0x7465737465);
+(37, 'teste imagem', 0x746573746520696d6167656d),
+(32, 'teste', 0x6173646164),
+(33, 'teste', 0x6173646164),
+(35, 'teste', 0x6173646164);
 
 -- --------------------------------------------------------
 
@@ -177,7 +164,7 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
   `email` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   `senha` varchar(256) COLLATE utf8_unicode_ci NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=MyISAM AUTO_INCREMENT=9 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
+) ENGINE=MyISAM AUTO_INCREMENT=11 DEFAULT CHARSET=utf8mb3 COLLATE=utf8_unicode_ci;
 
 --
 -- Extraindo dados da tabela `usuarios`
@@ -185,13 +172,9 @@ CREATE TABLE IF NOT EXISTS `usuarios` (
 
 INSERT INTO `usuarios` (`id`, `nome`, `email`, `senha`) VALUES
 (1, 'Onivaldo Flores Junior', 'onivaldo.junior@ifpr.edu.br', '123456'),
-(2, 'teste', 'teste', 'teste'),
 (3, 'teste1', 'teste1', 'teste1'),
-(4, 'asd', 'asd', 'asd'),
-(5, '', 'onivaldo.junior', '123456'),
-(6, 'teste', 'teste', '123456'),
-(7, 'test5', 'test5', 'test5'),
-(8, 'user1', 'user1', 'user1');
+(10, 'Onivaldo teste', 'onivaldo.junior@ifpr.edu.br1234', '123456'),
+(6, 'testeabc', 'testeabc', '123456');
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

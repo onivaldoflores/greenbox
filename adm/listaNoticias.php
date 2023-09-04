@@ -101,11 +101,11 @@ if (!isset($_SESSION['login']) == true) {
                                     echo "<td> -- </td>";
                                     echo "<td> -- </td>";
                                 } else {
-                                    echo "<td>" . $foto['foto'] . "</td>";
+echo "<td> <img class='img-lista-noticias' src='../uploads/fotos/" . $foto['foto'] . "' alt=''></td>";
                                     echo "<td>" . $foto['legenda'] . "</td>";
                                 }
                             }
-echo "<td><a href='javascript:excluir(" . $id_noticia . ")'>&#10060;</a> <a href='#'>&#128221;</a></td>";
+                            echo "<td><a href='javascript:excluir(" . $id_noticia . ")'>&#10060;</a> <a href='#'>&#128221;</a></td>";
                             echo "</tr>";
                         }
                         ?>

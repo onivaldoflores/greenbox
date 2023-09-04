@@ -40,6 +40,14 @@ if(!isset($_SESSION['login']) == true){
                 window.location.href = "excluiUsuario.php?id="+id;
             }
         }
+
+        function editar(id){
+            let resposta = confirm("Deseja editar os dados deste usuário?");
+
+            if(resposta == true){
+                window.location.href = "editUsuarios.php?id="+id;
+            }
+        }
     </script>
 </head>
 <body>
@@ -87,7 +95,7 @@ if(!isset($_SESSION['login']) == true){
                                 echo "<td>". $usuario['id'] ."</td>";
                                 echo "<td>". $usuario['nome'] ."</td>";
                                 echo "<td>". $usuario['email'] ."</td>";
-                                echo "<td><a href='javascript:excluir(". $usuario['id'].")'>&#10060;</a> <a href='#'>&#128221;</a></td>";
+echo "<td><a href='javascript:excluir(". $usuario['id'].")'>&#10060;</a> <a href='javascript:editar(". $usuario['id'].")'>&#128221;</a></td>";
                             echo "</tr>";
                         }
                     ?>
