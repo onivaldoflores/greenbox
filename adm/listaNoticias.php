@@ -4,9 +4,6 @@ require_once("conexao.php");
 $sql = "SELECT * FROM noticias ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
 
-?>
-
-<?php
 session_start();
 
 if (!isset($_SESSION['login']) == true) {
@@ -40,7 +37,14 @@ if (!isset($_SESSION['login']) == true) {
             if (resposta == true) {
                 window.location.href = "excluirNoticia.php?id=" + id;
             }
+        }
 
+        function editar(id){
+            let resposta = confirm("Deseja realmente editar essa notícia?");
+
+            if (resposta == true) {
+                window.location.href = "editNoticias.php?id=" + id;
+            }
         }
     </script>
 </head>
@@ -105,7 +109,7 @@ echo "<td> <img class='img-lista-noticias' src='../uploads/fotos/" . $foto['foto
                                     echo "<td>" . $foto['legenda'] . "</td>";
                                 }
                             }
-                            echo "<td><a href='javascript:excluir(" . $id_noticia . ")'>&#10060;</a> <a href='#'>&#128221;</a></td>";
+echo "<td><a href='javascript:excluir(" . $id_noticia . ")'>&#10060;</a> <a href='javascript:editar(".$id_noticia.")'>&#128221;</a></td>";
                             echo "</tr>";
                         }
                         ?>

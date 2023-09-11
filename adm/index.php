@@ -21,20 +21,10 @@
         </form>
     </div>    
 
-<!--ASSIM SE FAZ UM COMENTÁRIO NO HTML-->
-<p>Você pode 
-    escrever um 
-    parágrado 
-    de qualquer jeito. 
-    Basta colocar tudo 
-    no meio do par de tags &lt;p&gt; e &lt;/p&gt;
-</p>
-
-<p>Se precisar quebrar
-    o texto em algum lugar
-    específico <br> como esse,
-    voc~e pode usar a tag &lt;br&gt;
-</p>
+    <dl>
+        <dt>HTML</dt>
+        <dd>Linguagem de marcação utilizada para criar conteúdo de sites</dd>
+    </dl>
 
 </body>
 </html>
