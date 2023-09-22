@@ -66,11 +66,13 @@
     padding: 24px;
 }
 
-.titulo_noticia p{
+.titulo_noticia a{
     font-family: sans-serif;
     font-size: 26px;
     font-weight: bold;
     margin-top: 15px;
+    text-decoration: none;
+    color: #000;
 }
 
 .texto_noticia p{
@@ -78,6 +80,13 @@
     font-size: 22px;
     margin-top: 15px;
 }
+
+.img_noticia img{
+    width:281px;
+    height: 216px;
+}
+
+/**/
 
 #produtos{
     height: 641px;

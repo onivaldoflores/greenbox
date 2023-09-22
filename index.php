@@ -1,8 +1,12 @@
+<?php
+    include_once('conexao.php');
+?>
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
-    <title>Document</title>
+    <title>GreenBox</title>
     <link rel="stylesheet" href="estilo/estilo.css">
 </head>
 <body>
@@ -20,52 +24,41 @@
                 <br>
                 <input type="button" name="conheca" class="btn_conheca" value="Conheça">
             </div>
-
         </div>
 
         <div id="quadro">
-            <div class="noticia">
-                <div class="noticia_interno">
-                    <div class="img_noticia">
-                        <img src="img/img_noticia.png" alt="">
-                    </div>
-                    <div class="titulo_noticia">
-                        <p>DELIVERY DE CESTAS ORGÂNICAS</p>
-                    </div>
-                    <div class="texto_noticia">
-                        <p>Receba a cesta de produtos em sua casa toda semana</p>
-                    </div>
-                </div>
-            </div>
-            <div class="noticia">
-                <div class="noticia_interno">
-                    <div class="img_noticia">
-                        <img src="img/img_noticia.png" alt="">
-                    </div>
-                    <div class="titulo_noticia">
-                        <p>PRODUTORES CERTIFICADOS</p>
-                    </div>
-                    <div class="texto_noticia">
-                        <p>Todos os fornecedores, são pequenos produtos certificados</p>
-                    </div>
-                </div>
-            </div>
-            <div class="noticia">
-                <div class="noticia_interno">
-                    <div class="img_noticia">
-                        <img src="img/img_noticia.png" alt="">
-                    </div>
-                    <div class="titulo_noticia">
-                        <p>PRODUTOS SELECIONADOS</p>
-                    </div>
-                    <div class="texto_noticia">
-                        <p>Todos os produtos passam por um rigoroso processo de seleção</p>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
+            <?php
+                $sql_noticia = "SELECT * FROM noticias ORDER BY id DESC";
+                $result = mysqli_query($conn, $sql_noticia);
 
+                $i=1;
+                while($noticia = mysqli_fetch_assoc($result) and $i <= 3){
+            ?>
+                <div class="noticia">
+                    <div class="noticia_interno">
+                        <?php
+                            $id_noticia = $noticia["id"]; 
+                            $sql_foto = "SELECT * FROM fotos WHERE id_noticia = $id_noticia";
+                            $result_foto = mysqli_query($conn, $sql_foto);
+                            while($foto = mysqli_fetch_assoc($result_foto)){
+                                echo "<div class='img_noticia'>";
+                                    echo "<img src='uploads/fotos/".$foto["foto"]."' alt=''>";
+                                echo "</div>";                                
+                            }
+                        ?>
+                        <div class="titulo_noticia">
+                            <?php echo "<a href='#'>". $noticia['titulo'] ."</a>"; ?>
+                        </div>
+                        <div class="texto_noticia">
+                            <?php echo "<p>". mb_strimwidth($noticia['texto'], 0, 160, "...") ."</p>"; ?>
+                        </div>
+                    </div>
+                </div>
+            <?php
+                    $i++;
+                }
+            ?>         
+        </div>
         <div id="produtos">
             <div class="transparencia-produtos">
                 <p>PRINCIPAIS PRODUTOS</p>
