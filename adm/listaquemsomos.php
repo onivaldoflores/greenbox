@@ -1,7 +1,7 @@
 <?php
 require_once("conexao.php");
 
-$sql = "SELECT * FROM noticias WHERE tipo = 'noticia' ORDER BY id DESC";
+$sql = "SELECT * FROM noticias WHERE tipo = 'quemsomos' ORDER BY id DESC";
 $result = mysqli_query($conn, $sql);
 
 session_start();

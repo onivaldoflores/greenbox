@@ -75,9 +75,14 @@
     color: #000;
 }
 
-.texto_noticia p{
+.texto_noticia a{
     font-family: sans-serif;
     font-size: 22px;
+    color: #000;
+    text-decoration: none;
+}
+
+.texto_noticia a p{
     margin-top: 15px;
 }
 

@@ -219,6 +219,7 @@ input[type="file"]{
 
 .img-lista-noticias{
     width: 200px;
+    margin: 0px;
 }
 
 .tabela_usuarios tr td{

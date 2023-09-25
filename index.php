@@ -41,16 +41,16 @@
                             $sql_foto = "SELECT * FROM fotos WHERE id_noticia = $id_noticia";
                             $result_foto = mysqli_query($conn, $sql_foto);
                             while($foto = mysqli_fetch_assoc($result_foto)){
-                                echo "<div class='img_noticia'>";
-                                    echo "<img src='uploads/fotos/".$foto["foto"]."' alt=''>";
-                                echo "</div>";                                
+    echo "<div class='img_noticia'>";
+        echo "<a href='noticia.php?id=".$id_noticia."'><img src='uploads/fotos/".$foto["foto"]."' alt=''></a>";
+    echo "</div>";                                
                             }
                         ?>
                         <div class="titulo_noticia">
-                            <?php echo "<a href='#'>". $noticia['titulo'] ."</a>"; ?>
+                            <?php echo "<a href='noticia.php?id=".$id_noticia."'>". $noticia['titulo'] ."</a>"; ?>
                         </div>
                         <div class="texto_noticia">
-                            <?php echo "<p>". mb_strimwidth($noticia['texto'], 0, 160, "...") ."</p>"; ?>
+                            <?php echo "<a href='noticia.php?id=".$id_noticia."'><p>". mb_strimwidth($noticia['texto'], 0, 80, "...") ."</p></a>"; ?>
                         </div>
                     </div>
                 </div>
