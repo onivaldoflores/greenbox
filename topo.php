@@ -5,8 +5,8 @@
 <div id="menu">
     <nav>
         <ul>
-            <li><a href="#" target="">HOME</a></li>
-            <li><a href="#" target="">QUEM SOMOS</a></li>
+            <li><a href="index.php" target="">HOME</a></li>
+            <li><a href="quemsomos.php" target="">QUEM SOMOS</a></li>
             <li><a href="#" target="">PRODUTOS</a></li>
             <li><a href="#" target="">CONTATO</a></li>
         </ul>

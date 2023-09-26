@@ -28,7 +28,7 @@
 
         <div id="quadro">
             <?php
-                $sql_noticia = "SELECT * FROM noticias ORDER BY id DESC";
+                $sql_noticia = "SELECT * FROM noticias WHERE tipo='noticia' ORDER BY id DESC";
                 $result = mysqli_query($conn, $sql_noticia);
 
                 $i=1;
