@@ -50,7 +50,18 @@ if(!isset($_SESSION['login']) == true){
                         <label>NOTÍCIAS</label>
                     </div>
                     <div class="conteudo-aba">
-                        
+                        <?php
+                            require_once('conexao.php');
+
+                            $sql_noticia = "SELECT * FROM noticias ORDER BY id DESC";
+                            $result = mysqli_query($conn, $sql_noticia);
+
+                            $i = 1;
+                            while($noticia = mysqli_fetch_assoc($result) and $i <= 5){
+                                echo "<p>".$i." - ".$noticia['titulo']."</p>";
+                                $i++;
+                            }                        
+                        ?>
                     </div>
                 </div>
                 <div class="aba-sistema">
@@ -58,7 +69,16 @@ if(!isset($_SESSION['login']) == true){
                         <label>USUÁRIOS</label>
                     </div>
                     <div class="conteudo-aba">
-                        
+                        <?php
+                            $sql_usuario = "SELECT * FROM usuarios ORDER BY id DESC";
+                            $result = mysqli_query($conn, $sql_usuario);
+
+                            $i = 1;
+                            while($usuario = mysqli_fetch_assoc($result) and $i <= 5){
+                                echo "<p>".$i." - ".$usuario['nome']."</p>";
+                                $i++;
+                            }                        
+                        ?>
 
                     </div>
                 </div>

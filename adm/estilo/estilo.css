@@ -184,6 +184,18 @@ input[type="file"]{
     padding: 10px;
 }
 
+.conteudo-aba p{
+    padding: 7px;
+}
+
+.conteudo-aba p:hover{
+    text-decoration: underline;
+    color: #ffffff;
+    background-color: #2e2e2e;
+    transition: .5s;
+    border-radius: 5px;
+}
+
 .mapa-site p{
     font-family: Trebuchet MS;
     font-size: 12px;
